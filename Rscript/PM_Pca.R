@@ -42,9 +42,9 @@ axesfile<-paste(opts$outfile, ".pc", sep="")
 
 ## load data
 # import meta file
-meta_orig <- read.table(file=opts$meta_data, header=TRUE, row.names=1)
+meta_orig <- read.table(file=opts$meta_data, header=TRUE, row.names=1, sep="\t")
 # import abundance file
-abund_orig <- read.table(file=opts$abund_file, header=TRUE, row.names=1)
+abund_orig <- read.table(file=opts$abund_file, header=TRUE, row.names=1, sep="\t")
 
 ## main calc & draw function definition
 PM_pca <- function(da, md) {
